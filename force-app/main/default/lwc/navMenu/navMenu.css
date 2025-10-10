@@ -65,6 +65,7 @@ a::selection {
     left: 0;
     z-index: 9;
     background-color: #000000;
+    color: aliceblue;
 }
 
 .container {
@@ -97,7 +98,7 @@ a::selection {
     font: var(--default-font);
     padding: 10px;
     margin: 0px 0px 10px;
-    color: rgba(0, 0, 0);
+    color: rgb(247, 243, 243);
 }
 
 .nav-menu a:hover {
