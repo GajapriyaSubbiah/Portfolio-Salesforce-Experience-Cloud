@@ -64,7 +64,7 @@ a::selection {
     top: 0;
     left: 0;
     z-index: 9;
-    background-color: var(--default-green-color);
+    background-color: #000000;
 }
 
 .container {
