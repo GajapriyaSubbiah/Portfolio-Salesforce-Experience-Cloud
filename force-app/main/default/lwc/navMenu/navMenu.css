@@ -19,9 +19,9 @@
 
 :host {
     --default-box-shadow-color: rgba(0, 0, 0, 0.5);
-    --default-blue-color: rgba(13, 157, 218, 0.5);
-    --default-gray-color: rgba(163, 170, 174);
-    --default-green-color: rgba(217, 234, 211);
+    --default-blue-color: rgb(255, 255, 255);
+    --default-gray-color: rgb(0, 0, 0);
+    --default-green-color: rgb(7, 7, 7);
     --default-box-shadow: 5px 5px 5px 1px var(--default-box-shadow-color);
     --default-border-solid: 1px solid var(--default-gray-color);
     --default-font-size: 16px;
@@ -98,13 +98,15 @@ a::selection {
     font: var(--default-font);
     padding: 10px;
     margin: 0px 0px 10px;
-    color: rgb(247, 243, 243);
+    color: rgb(250, 247, 247);
+    background-color:  #080808;
 }
 
 .nav-menu a:hover {
     border: var(--default-border-solid);
     border-radius: 5px;
-    background-color: var(--default-blue-color);
+    color: #080808;
+    background-color: #f8f6f6;
     box-shadow: var(--default-box-shadow);
 }
 
@@ -139,7 +141,6 @@ a::selection {
         display: block;
         border: var(--default-border-solid);
         border-radius: 5px;
-        background-color: var(--default-green-color);
         box-shadow: var(--default-box-shadow);
     }
 

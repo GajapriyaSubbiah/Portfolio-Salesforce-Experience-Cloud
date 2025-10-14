@@ -16,7 +16,7 @@ const HIGHLIGHT_NAV_MENU_LINK_STYLE = `
     `;
 
 export default class NavMenu extends LightningElement {
-    imagePhoto = IMAGES + '/';
+    imagePhoto = IMAGES + '/PFPMaker202404Square.png';
 
     currentPageReference;
     pageName;

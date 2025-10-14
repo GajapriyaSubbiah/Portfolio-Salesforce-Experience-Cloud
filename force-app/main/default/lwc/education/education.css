@@ -19,9 +19,6 @@
 
 :host {
     --default-box-shadow-color: rgba(0, 0, 0, 0.5);
-    --default-blue-color: rgba(13, 157, 218, 0.5);
-    --default-gray-color: rgba(163, 170, 174);
-    --default-green-color: rgba(217, 234, 211);
     --default-box-shadow: 5px 5px 5px 1px var(--default-box-shadow-color);
     --default-border-dotted: 1px dotted var(--default-gray-color);
     --default-border-solid: 1px solid var(--default-gray-color);
@@ -90,7 +87,6 @@ a::selection, span::selection {
 /* 12. Attributes */
 .container-outer {
     margin: 50px auto 0px;
-    background-color: var(--default-green-color);
 }
 
 .container {
@@ -190,7 +186,6 @@ a::selection, span::selection {
     font: var(--default-font);
     padding: 5px 0;
     margin-left: -50px;
-    background-color: var(--default-blue-color);
     color: rgba(0, 0, 0);
     opacity: 0;
     transition: opacity 0.3s;
