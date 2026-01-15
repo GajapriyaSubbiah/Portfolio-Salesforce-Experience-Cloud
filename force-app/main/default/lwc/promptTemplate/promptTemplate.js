@@ -8,7 +8,7 @@ export default class PromptTemplate extends LightningElement {
     // https://icons8.com/icons/set/external-link
     iconExternalURL = ICONS + '/icons8-external-link-16.png';
 
-    gifJobSearch = GIFS + '/einstein-ai-prompt.jpg';
+    gifJobSearch = IMAGES + '/einstein-ai-prompt.jpg';
     gifJobApplication = GIFS + '/CloudCodeAcademyCapstoneJobApplication.gif';
     gifCalculator = GIFS + '/CloudCodeAcademyCapstoneCalculator.gif';
     imageEntityDiagram = IMAGES + '/CloudCodeAcademyCapstoneEntityDiagram.png';
