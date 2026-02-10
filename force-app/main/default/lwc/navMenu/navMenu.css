@@ -18,10 +18,10 @@
 }
 
 :host {
-    --default-box-shadow-color: rgba(0, 0, 0, 0.5);
-    --default-blue-color: rgb(255, 255, 255);
-    --default-gray-color: rgb(0, 0, 0);
-    --default-green-color: rgb(7, 7, 7);
+    --default-box-shadow-color: rgba(245, 190, 190, 0.5);
+    --default-blue-color: rgba(253, 245, 245, 0.5);
+    --default-gray-color: rgb(255, 255, 255);
+    --default-green-color: rgba(245, 238, 244, 0.884);
     --default-box-shadow: 5px 5px 5px 1px var(--default-box-shadow-color);
     --default-border-solid: 1px solid var(--default-gray-color);
     --default-font-size: 16px;
@@ -64,8 +64,7 @@ a::selection {
     top: 0;
     left: 0;
     z-index: 9;
-    background-color: #000000;
-    color: aliceblue;
+    background-color: var(--default-green-color);
 }
 
 .container {
@@ -98,78 +97,41 @@ a::selection {
     font: var(--default-font);
     padding: 10px;
     margin: 0px 0px 10px;
-    color: rgb(250, 247, 247);
-    background-color:  #080808;
+    color: rgba(0, 0, 0);
     width: 100%;
 }
 
 .nav-menu a:hover {
     border: var(--default-border-solid);
     border-radius: 5px;
-    color: #080808;
-    background-color: #f8f6f6;
-    box-shadow: var(--default-box-shadow);
+    background-color: var(--default-blue-color);
+    box-shadow: var(--default-box-shadow);    
     width: 100%;
 }
 
 .nav-menu a.icon {
     float: right;
     display: block;
+    width: 100%;
 }
 
 .nav-menu.responsive {
     position: relative;
+    width: 100%;
 }
 
 .nav-menu.responsive ul li, .nav-menu.responsive a {
     float: none;
     display: block;
     text-align: left;
+    width: 100%;
 }
 
 .nav-menu.responsive a.icon {
     position: absolute;
     top: 0;
     right: 0;
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    /* 06. Lists */
-    ul li:hover ul {
-        width: 300px;
-        position: absolute;
-        top: 60px;
-        display: block;
-        border: var(--default-border-solid);
-        border-radius: 5px;
-        box-shadow: var(--default-box-shadow);
-        background-color:  #080808;
-    }
-
-    /* 12. Attributes */
-    .container {
-        max-width: 1600px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .container-img-photo {
-        display: inline-flex;
-        margin: 0px 50px 0px 0px;
-    }
-
-    .nav-menu li:not(:first-child) {
-        display: inline-block;
-    }
-
-    .nav-menu a {
-        margin: 0px 50px 0px 0px;
-    }
-
-    .nav-menu a.icon {
-        display: none;
-    }
+    width: 100%;
 }
 
 @keyframes grow {

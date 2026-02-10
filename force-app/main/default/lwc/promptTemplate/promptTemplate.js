@@ -1,33 +1,29 @@
 import { LightningElement } from 'lwc';
-
+import { NavigationMixin } from 'lightning/navigation';
 import ICONS from '@salesforce/resourceUrl/Icons';
-import GIFS from '@salesforce/resourceUrl/GIFs';
 import IMAGES from '@salesforce/resourceUrl/Images';
 
-export default class PromptTemplate extends LightningElement {
+
+export default class PromptTemplate extends NavigationMixin(LightningElement) {
     // https://icons8.com/icons/set/external-link
     iconExternalURL = ICONS + '/icons8-external-link-16.png';
 
-    gifJobSearch = IMAGES + '/einstein-ai-prompt.jpg';
-    gifJobApplication = GIFS + '/CloudCodeAcademyCapstoneJobApplication.gif';
-    gifCalculator = GIFS + '/CloudCodeAcademyCapstoneCalculator.gif';
-    imageEntityDiagram = IMAGES + '/CloudCodeAcademyCapstoneEntityDiagram.png';
     imageCloudCodeAcademyCert = IMAGES + '/CloudCodeAcademyCert.png';
+    imageBYOLWREnhancedXPCloud = IMAGES + '/XPCloudBYOLWREnhanced.png';
+    imageTalentStacker = IMAGES + '/TalentStacker.png';
+    imageFlowSprintCert = IMAGES + '/ClickedCertSprintFlow.png';
+    imageTrailvenger = IMAGES + '/TrailvengerWeek 2_Branding_Avatar.png';
+    imageAstroshineCleaner = IMAGES + '/AstroshineCleanerAvatar.jpg';
+    gifJobSearch = IMAGES + '/einstein-ai-prompt.jpg';
 
+    externalUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
+    
     scrollBackToTopButton;
-
-    collapsibleHeading;
-
-    collapsibleContent;
 
     renderedCallback() {
         this.scrollBackToTopButton = this.template.querySelector('.back-to-top');
 
-        this.collapsibleHeading = this.template.querySelectorAll('.collapsible-heading');
-
         window.onscroll = () => {this.showOrHideButton()};
-
-        this.collapsibleListener();
     }
 
     showOrHideButton() {
@@ -46,43 +42,5 @@ export default class PromptTemplate extends LightningElement {
         }
 
         window.scrollTo(SCROLL_OPTIONS);
-    }
-
-    collapsibleListener() {
-        for (let i = 0; i < this.collapsibleHeading.length; i++) {
-            this.collapsibleHeading[i].addEventListener('click', this.handleCollapsibleListener);
-        }
-    }
-
-    handleCollapsibleListener() {
-        this.classList.toggle('active');
-
-        this.collapsibleContent = this.nextElementSibling;
-
-        if (this.collapsibleContent.style.maxHeight) {
-            this.collapsibleContent.style.maxHeight = null;
-        } else {
-            this.collapsibleContent.style.maxHeight = this.collapsibleContent.scrollHeight + 'px';
-        }
-    }
-
-    collapseAll() {
-        for (let i = 0; i < this.collapsibleHeading.length; i++) {
-            this.collapsibleHeading[i].classList.remove('active');
-
-            this.collapsibleContent = this.collapsibleHeading[i].nextElementSibling;
-
-            this.collapsibleContent.style.maxHeight = null;
-        }
-    }
-
-    expandAll() {
-        for (let i = 0; i < this.collapsibleHeading.length; i++) {
-            this.collapsibleHeading[i].classList.add('active');
-
-            this.collapsibleContent = this.collapsibleHeading[i].nextElementSibling;
-
-            this.collapsibleContent.style.maxHeight = this.collapsibleContent.scrollHeight + 'px';
-        }
     }
 }

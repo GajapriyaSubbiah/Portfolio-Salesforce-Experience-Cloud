@@ -1,0 +1,211 @@
+<template>
+    <div class="container-outer">
+        <div class="container">
+            <div class="slds-text-align_center">
+                <a href="/project-salesforce/portfolio">
+                    <button type="button" class="nav-project">
+                        <label>Portfolio</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/student-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Student Tracking</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/sprint-flow">
+                    <button type="button" class="nav-project">
+                        <label>Flows Automation</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/superhero-villain-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Superhero and Villain Tracking</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/customer-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Customer Tracking</label>
+                    </button>
+                </a>
+            </div>
+
+            <h1 class="slds-var-m-top_large slds-text-align_center">Einstein Generative AI and Data Cloud</h1>
+
+            <section class="slds-var-m-top_large">
+                <p class="slds-var-m-top_large"><b>Use Case</b>&#58; Field Generation Prompt Template with Einstein Generative AI</p>
+                <p class="slds-var-m-top_large"></p>
+                <p class="slds-var-m-top_large"><b>GitHub Repo</b>&#58; <a href="https://github.com/GajapriyaSubbiah/Portfolio-Salesforce-Experience-Cloud/blob/main/force-app/main/default/lwc/promptTemplate/promptTemplate.html" target="_blank" rel="noopener noreferrer">GitHub <img src={iconExternalURL} alt="External Link" aria-hidden="true"></a></p>
+            </section>
+
+           
+
+            <section class="slds-var-m-top_large">
+                <h3 class="collapsible-heading">1. Field Generation Prompt Template with Einstein Generative AI</h3>
+
+                <div class="collapsible-scrollable">
+                    <ul class="slds-list_dotted">
+                        <li><b>Purpose</b>&#58; The scenario centers on a familiar challenge: managing customer support cases. To enhance productivity and improve customer satisfaction, you'll leverage generative AI to create concise, 100-word summaries of case details. These AI-generated summaries help agents get up to speed faster and make it easier to spot cases that require extra attention.</li>
+                    </ul>
+
+                    <div class="container-img">
+                        <img src={gifJobSearch} alt="Job Search" class="img-screenshot">
+                    </div>
+                    <p class="slds-var-m-top_large">Create a prompt template</p>
+                    <ul class="slds-list_dotted">
+                        <li>In Setup → Prompt Builder, click New Prompt Template.</li>
+                        <li>Choose Field Generation as the template type.</li>
+                        <li>Give the template a name and description (e.g. "Quick Summary").</li>
+                        <li>Associate it to the Case object and a specific text field (e.g. Quick_Summary).</li>
+                        <li>Now, write your instructions. The example provided:</li>
+                        <li>You'll then replace placeholders like COMMENTS, SUBJECT, PRIORITY, and TYPE with merge fields (i.e. Input:Case.CaseComments, Input:Case.Subject, etc.). This lets the prompt pull in real data dynamically.</li>
+                        <li>Finally, select which LLM model to use (for example, OpenAI GPT-4 Omni Mini) and save.</li>
+                    </ul>
+
+                    <p class="slds-var-m-top_large">**To make the summary field accessible in the UI:**</p>
+
+                    <ul class="slds-list_dotted">
+                        <li>Edit the Case Lightning page and upgrade to Dynamic Forms (if not already).</li>
+                        <li>For the Quick Summary field, set its Prompt Template to the one you created.</li>
+                        <li>Save and activate that page configuration.</li>
+                    </ul>
+                    <p class="slds-var-m-top_large">Once live, users will see a prompt icon beside the field — click it, and Einstein will suggest a summary based on your template. They can accept the suggestion (or iterate further) and then save it.</p>
+                
+                
+                <h3 class="collapsible-heading">1.1. Things Learned and Applied</h3>
+
+                <div class="collapsible-content">
+                    <ul class="slds-list_dotted">
+                        <li><strong>Prompt Builder:</strong> A Salesforce tool for creating reusable prompt templates that send structured instructions to an LLM.</li>
+                        <li><strong>Prompt template:</strong> A parametrized instruction set that includes human-readable directions plus merge fields to inject record data.</li>
+                        <li><strong>Merge fields / Inputs:</strong> Placeholders (e.g., Case.Subject, Case.CaseComments) that dynamically pull Salesforce record data into the prompt.</li>
+                        <li><strong>Field Generation template:</strong> A template type that writes or updates a text field on a record (e.g., Quick_Summary on Case).</li>
+                        <li><strong>LLM / Einstein Generative AI:</strong> The large language model that generates the summary text when fed the merged prompt.</li>
+                        <li><strong>Preview:</strong> A testing step that shows model outputs for a chosen sample record before activation.</li>
+                        <li><strong>Dynamic Forms:</strong> A Lightning page feature that exposes fields and prompt actions in the Case UI so agents can run templates inline.</li>
+                        <li><strong>Guardrails:</strong> Constraints in prompt wording (length, tone, structure) to control model output and reduce unwanted results.</li>
+                    </ul>
+                </div>
+
+                <h3 class="collapsible-heading">1.2. Demo</h3>
+
+                <div class="collapsible-content">
+
+                    <p class="slds-text-align_left">Take a Look how amazing feature it is</p>
+
+                    <div class="container-iframe">
+                        <iframe src="https://www.youtube.com/embed/Ta5LYa5sGXM?si=25oVVJvl5rSysXL5" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <div class="border-bottom"></div>
+
+            <section>
+                <h3 class="collapsible-heading">2. Data Model</h3>
+
+                <!--div class="collapsible-content">
+                    <div class="container-img">
+                        <img src={imageEntityDiagram} alt="Entity Diagram" class="img-screenshot">
+                    </div>
+                </div-->
+            </section>
+
+            <div class="border-bottom"></div>
+
+            <section>
+                <h3 class="collapsible-heading">3. Video</h3>
+
+                <!--div class="collapsible-content">
+
+                    <p class="slds-text-align_left">Demo and Code Review &#40;35&#58;52&#41;</p>
+
+                    <div class="container-iframe">
+                        <iframe src="https://youtube.com/embed/9z-fKUY5lPQ" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div-->
+            </section>
+
+            <div class="border-bottom"></div>
+
+            <section>
+                <h3 class="collapsible-heading">4. Things Learned and Applied</h3>
+
+                <!--div class="collapsible-content">
+                    <ul class="slds-list_dotted">
+                        <li>Coding Best Practices</li>
+                        <li>Data Manipulation Language &#40;DML&#41; Operations</li>
+                        <li>Salesforce Object Query Language &#40;SOQL&#41;</li>
+                        <li>Apex Triggers</li>
+                        <li>Asynchronous Apex</li>
+                        <li>Application Programming Interface &#40;API&#41; Integrations</li>
+                        <li>Lightning Web Components &#40;LWC&#41;</li>
+                        <li>Positive and Negative Unit Testing including Mocking</li>
+                        <li>Retrieving and Deploying Metadata via Salesforce Developer Experience &#40;DX&#41; Tools</li>
+                        <li>Version Control via Git and GitHub</li>
+                    </ul>
+                </div-->
+            </section>
+
+            <div class="container-collapsible-button slds-var-m-top_large">
+                <button type="button" class="collapsible-button" onclick={collapseAll}>
+                    <label>Collapse All</label>
+                </button>
+
+                <button type="button" class="collapsible-button" onclick={expandAll}>
+                    <label>Expand All</label>
+                </button>
+            </div>
+
+            <!--div class="container-img">
+                <img src={imageCloudCodeAcademyCert} alt="Flows Automation Team Sprint Cert" class="img-screenshot">
+            </div-->
+
+            <div class="slds-text-align_center slds-var-m-top_xx-large">
+                <a href="/project-salesforce/portfolio">
+                    <button type="button" class="nav-project">
+                        <label>Portfolio</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/student-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Student Tracking</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/sprint-flow">
+                    <button type="button" class="nav-project">
+                        <label>Flows Automation</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/superhero-villain-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Superhero and Villain Tracking</label>
+                    </button>
+                </a>
+
+                <a href="/project-salesforce/customer-tracking">
+                    <button type="button" class="nav-project">
+                        <label>Customer Tracking</label>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="tooltip">
+            <button type="button" class="back-to-top" onclick={scrollBackToTop}>
+                <label>
+                    &uarr;
+
+                    <span class="tooltip-text slds-text-align_center">Back To Top</span>
+                </label>
+            </button>
+        </div>
+    </div>
+</template>

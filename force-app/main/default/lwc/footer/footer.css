@@ -26,7 +26,7 @@
 
 p {
     font: var(--default-font);
-    color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 p::selection {
@@ -45,7 +45,7 @@ img::selection {
 /* 12. Attributes */
 .container-outer {
     width: 100%;
-    background-color: #000000;
+    background-color: rgb(22, 1, 101);
 }
 
 .container {

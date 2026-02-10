@@ -109,8 +109,38 @@ a::selection, span::selection {
 }
 
 .container-img-my-trailmoji {
-    max-width: 400px;
+    max-width: 350px;
     margin: 25px auto;
+
+    /* animation setup */
+    animation-name: slideFade;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* keyframes for sliding */
+@keyframes slideFade {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
 }
 
 .arrow-down {
