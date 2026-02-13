@@ -15,8 +15,10 @@ export default class PromptTemplate extends NavigationMixin(LightningElement) {
     imageTrailvenger = IMAGES + '/TrailvengerWeek 2_Branding_Avatar.png';
     imageAstroshineCleaner = IMAGES + '/AstroshineCleanerAvatar.jpg';
     gifJobSearch = IMAGES + '/einstein-ai-prompt.jpg';
+    imageLuxeHotel = IMAGES + '/imageLuxeHotel.jpg';
 
     externalUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
+    luxeHotelUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
     
     scrollBackToTopButton;
 
