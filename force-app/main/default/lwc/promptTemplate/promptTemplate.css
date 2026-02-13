@@ -100,18 +100,19 @@ a::selection, span::selection {
 }
 
 .card {
-    height: 250px;
+    height: 200px;
     width: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: var(--default-border-solid);
     border-radius: 5px;
-    margin: 0px auto 25px;
-    background-color: rgba(163, 170, 174, 0.5);
+    margin: 0px 0px 0px 25px;
+    background-color: rgba(136, 182, 252, 0.5);
     box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5); /* Add shadow to create "card" effect */
     transition: 0.3s;
 }
+
 
 .card:hover {
     animation: grow 5s;

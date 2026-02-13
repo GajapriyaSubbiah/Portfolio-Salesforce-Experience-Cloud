@@ -18,7 +18,7 @@ export default class PromptTemplate extends NavigationMixin(LightningElement) {
     imageLuxeHotel = IMAGES + '/imageLuxeHotel.jpg';
 
     externalUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
-    luxeHotelUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
+    luxeHotelUrl = 'https://crmchatter.blogspot.com/2026/02/grandluxehotel.html';
     
     scrollBackToTopButton;
 
