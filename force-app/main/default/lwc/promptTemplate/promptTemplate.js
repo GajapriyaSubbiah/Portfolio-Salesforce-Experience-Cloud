@@ -10,6 +10,7 @@ export default class PromptTemplate extends NavigationMixin(LightningElement) {
 
     imageCloudCodeAcademyCert = IMAGES + '/CloudCodeAcademyCert.png';
     imageBYOLWREnhancedXPCloud = IMAGES + '/XPCloudBYOLWREnhanced.png';
+    imagemedicoreresearch =  IMAGES + '/medicore_research.jpg';
     imageTalentStacker = IMAGES + '/TalentStacker.png';
     imageFlowSprintCert = IMAGES + '/ClickedCertSprintFlow.png';
     imageTrailvenger = IMAGES + '/TrailvengerWeek 2_Branding_Avatar.png';
@@ -18,9 +19,16 @@ export default class PromptTemplate extends NavigationMixin(LightningElement) {
     imageLuxeHotel = IMAGES + '/imageLuxeHotel.jpg';
 
     externalUrl = 'https://crmchatter.blogspot.com/2026/01/prompt-template.html';
+    MRP1externalUrl = 'https://crmchatter.blogspot.com/2026/02/blog-post.html';
+    MRP2externalUrl = 'https://crmchatter.blogspot.com/2026/03/part-2-seamless-enrollment-and-backend.html';
+    MRP3externalUrl =  'https://crmchatter.blogspot.com/2026/03/part-3-automating-post-enrollment.html';
     luxeHotelUrl = 'https://crmchatter.blogspot.com/2026/02/grandluxehotel.html';
     
     scrollBackToTopButton;
+
+    handleClick(event) {
+        event.target.classList.toggle('active');
+    }
 
     renderedCallback() {
         this.scrollBackToTopButton = this.template.querySelector('.back-to-top');

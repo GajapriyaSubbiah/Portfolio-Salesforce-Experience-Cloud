@@ -48,6 +48,7 @@ h3 {
 h4 {
     font: 18px / bold var(--default-font);
     color: rgba(0, 0, 0);
+    font-weight: bold;
 }
 
 /* 07. Media */
@@ -113,6 +114,19 @@ a::selection, span::selection {
     transition: 0.3s;
 }
 
+.column{
+    height: 205px;
+    width: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: var(--default-border-solid);
+    border-radius: 5px;
+    margin: 0px 10px 10px 25px;
+    background-color: rgba(136, 182, 252, 0.5);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5); /* Add shadow to create "card" effect */
+    transition: 0.3s;
+}
 
 .card:hover {
     animation: grow 5s;
@@ -186,11 +200,19 @@ a::selection, span::selection {
     .container-card {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .container-card1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 88px;
     }
 
     .card {
-        height: 325px;
-        width: 300px;
+        height: fit-content;
+        width: 360px;
     }
 }
 
