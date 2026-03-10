@@ -210,6 +210,12 @@ a::selection, span::selection {
         margin-top: 88px;
     }
 
+    .container-card2 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
     .card {
         height: fit-content;
         width: 360px;
